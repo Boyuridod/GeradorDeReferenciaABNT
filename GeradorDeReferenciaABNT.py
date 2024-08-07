@@ -1,9 +1,17 @@
 # TODO Colocar a data automaticamente 6 ago. 2024
 
 import pyperclip #pip install pyperclip
+# import datetime
+
+# Vetor de mêses
+mes = ["Jan.", "Fev.", "Mar.", "Abr.", "Mai.", "Jun.", "Jul.", "Ago.", "Set.", "Out.", "Nov.", "Dez."]
+
 
 # Recebendo as informações de entrada
 link = input("Link: ")
+tituloDoSite = input("Título do Artigo: ")
+nomeDoSite = input("Nome do Site: ")
+ano = input("Ano da publicação: ")
 
 autor = input("SOBRENOME, Nome do autor: ")
 
@@ -24,15 +32,13 @@ while(True):
         referencia += ". "
         break
 
-tituloDoSite = input("\nTítulo do Artigo: ")
-nomeDoSite = input("Nome do Site: ")
-ano = input("Ano da publicação: ")
+# data = str(datetime.day) + " " + mes[datetime.month] + " " + str(datetime.year)
 
 # Criando a referência perfeita
 referencia += tituloDoSite + ". " + nomeDoSite + ", " + ano + ". " + "Disponível em: " + link + ". Acesso em: " + "6 ago. 2024."
 
 # Saída dos dados
-print("\n", referencia, sep="")
+print("\n\n", referencia, sep="")
 
 pyperclip.copy(referencia)
 
