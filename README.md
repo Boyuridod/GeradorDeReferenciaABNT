@@ -1,5 +1,5 @@
-# GeradorDeCitacaoABNT
-    Este projeto tem como objetivo auxiliar o usuário na criação de citações conforme as normas da ABNT
+# GeradorDeReferenciaABNT
+    Este projeto tem como objetivo auxiliar o usuário na criação de referências conforme as normas da ABNT
 
 # Estrutura
     SOBRENOME, Nome do autor. Título da página ou do artigo. Nome do site, ano. Disponível em: <URL>. Acesso em: dia mês ano.
