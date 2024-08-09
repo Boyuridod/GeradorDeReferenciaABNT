@@ -1,6 +1,7 @@
-# TODO Colocar a data automaticamente 6 ago. 2024
+# TODO Ajustar a saida de dados para deixar mais bonitinha
 
 import pyperclip #pip install pyperclip
+from datetime import date
 # import datetime
 
 # Vetor de mêses
@@ -27,21 +28,31 @@ while(True):
 
         if(cont > 3):
             referencia = autor + " et al. "
+
+            print("\nMais de três autores detectados!")
+
             break
     except:
         referencia += ". "
         break
 
-# data = str(datetime.day) + " " + mes[datetime.month] + " " + str(datetime.year)
+data = str(date.today().day) + " " + mes[date.today().month] + " " + str(date.today().year)
 
 # Criando a referência perfeita
-referencia += tituloDoSite + ". " + nomeDoSite + ", " + ano + ". " + "Disponível em: " + link + ". Acesso em: " + "6 ago. 2024."
+referencia += tituloDoSite + ". " + nomeDoSite + ", " + ano + ". " + "Disponível em: " + link + ". Acesso em: " + data
 
 # Saída dos dados
-print("\n\n", referencia, sep="")
+if(cont < 3):
+    print("\n")
 
-pyperclip.copy(referencia)
+print("\n", referencia, sep="")
 
-print("\nCopiado para a Área de Transferência!")
+try:
+    pyperclip.copy(referencia)
+
+    print("\nCopiado para a Área de Transferência!")
+
+except:
+    print("\nNão foi possível copiar para sua área de transferência. Tente copiar manualmente.")
 
 # input("\nPressione ENTER para fechar...")
