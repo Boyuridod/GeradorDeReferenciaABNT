@@ -1,5 +1,3 @@
-# TODO Ajustar a saida de dados para deixar mais bonitinha
-
 import pyperclip #pip install pyperclip
 from datetime import date
 # import datetime
@@ -43,7 +41,7 @@ referencia += tituloDoSite + ". " + nomeDoSite + ", " + ano + ". " + "Disponíve
 
 # Saída dos dados
 if(cont < 3):
-    print("\n")
+    print("")
 
 print("\n", referencia, sep="")
 
