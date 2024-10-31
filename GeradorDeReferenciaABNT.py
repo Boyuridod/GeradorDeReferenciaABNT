@@ -1,6 +1,5 @@
 import pyperclip #pip install pyperclip
 from datetime import date
-# import datetime
 
 # Vetor de mêses
 mes = ["Jan.", "Fev.", "Mar.", "Abr.", "Mai.", "Jun.", "Jul.", "Ago.", "Set.", "Out.", "Nov.", "Dez."]
@@ -53,4 +52,4 @@ try:
 except:
     print("\nNão foi possível copiar para sua área de transferência. Tente copiar manualmente.")
 
-# input("\nPressione ENTER para fechar...")
+input("\nPressione ENTER para fechar...")
