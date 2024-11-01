@@ -33,7 +33,7 @@ while(True):
         referencia += ". "
         break
 
-data = str(date.today().day) + " " + mes[date.today().month] + " " + str(date.today().year)
+data = str(date.today().day) + " " + mes[date.today().month - 1] + " " + str(date.today().year)
 
 # Criando a referência perfeita
 referencia += tituloDoSite + ". " + nomeDoSite + ", " + ano + ". " + "Disponível em: " + link + ". Acesso em: " + data
