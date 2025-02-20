@@ -1,55 +1,38 @@
-import pyperclip #pip install pyperclip
-from datetime import date
+from ttkbootstrap import *
 
-# Vetor de mêses
-mes = ["Jan.", "Fev.", "Mar.", "Abr.", "Mai.", "Jun.", "Jul.", "Ago.", "Set.", "Out.", "Nov.", "Dez."]
+telaPrincipal = Window()
 
+# Predefinições
 
-# Recebendo as informações de entrada
-link = input("Link: ")
-tituloDoSite = input("Título do Artigo: ")
-nomeDoSite = input("Nome do Site: ")
-ano = input("Ano da publicação: ")
+telaPrincipal.geometry("700x700")
+telaPrincipal.title("Gerador de Referência ABNT")
+style = Style("cyborg")
 
-autor = input("SOBRENOME, Nome do autor: ")
+# Componentes
 
-referencia = autor
+labelLink = Label(telaPrincipal, text="Digite o link do artigo:")
+labelLink.grid(row= 0, column= 0, padx= 10, pady= 10)
 
-cont = 1
+inputLink = Text(telaPrincipal, height=1, width=10)
+inputLink.grid(row= 1, column= 0, padx= 10, pady= 10)
 
-while(True):
-    try:
-        referencia += "; " + input("SOBRENOME, Nome do autor ou [Ctrl + C] para parar: ")
+# link = inputLink.get("1.0", END)
 
-        cont += 1
+labelTituloDoArtigo = Label(telaPrincipal, text="Digite o título do artigo:")
+labelTituloDoArtigo.grid(row= 2, column= 0, padx= 10, pady= 10)
 
-        if(cont > 3):
-            referencia = autor + " et al. "
+labelNomeDoSite = Label(telaPrincipal, text="Digite o nome do site:")
+labelNomeDoSite.grid(row= 4, column= 0, padx= 10, pady= 10)
 
-            print("\nMais de três autores detectados!")
+labelAnoPublicacao = Label(telaPrincipal, text="Digite o ano da publicação:")
+labelAnoPublicacao.grid(row= 6, column= 0, padx= 10, pady= 10)
 
-            break
-    except:
-        referencia += ". "
-        break
+labelAutor = Label(telaPrincipal, text="Digite o nome do autor:")
+labelAutor.grid(row= 8, column= 0, padx= 10, pady= 10)
 
-data = str(date.today().day) + " " + mes[date.today().month - 1] + " " + str(date.today().year)
+botaoGerar = Button(telaPrincipal, text="Gerar referência", bootstyle = "success", command={print("Não implementado")})
+botaoGerar.grid(row= 10, column= 0, padx= 10, pady= 10)
 
-# Criando a referência perfeita
-referencia += tituloDoSite + ". " + nomeDoSite + ", " + ano + ". " + "Disponível em: " + link + ". Acesso em: " + data + "."
+#Chamar a Tela
 
-# Saída dos dados
-if(cont < 3):
-    print("")
-
-print("\n", referencia, sep="")
-
-try:
-    pyperclip.copy(referencia)
-
-    print("\nCopiado para a Área de Transferência!")
-
-except:
-    print("\nNão foi possível copiar para sua área de transferência. Tente copiar manualmente.")
-
-input("\nPressione ENTER para fechar...")
+telaPrincipal.mainloop()
