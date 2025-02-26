@@ -1,8 +1,12 @@
 import pyperclip #pip install pyperclip
 from datetime import date
 
-# Vetor de mêses
-mes = ["Jan.", "Fev.", "Mar.", "Abr.", "Mai.", "Jun.", "Jul.", "Ago.", "Set.", "Out.", "Nov.", "Dez."]
+def getMes(n):
+
+    # Vetor de mêses
+    mes = ["Jan.", "Fev.", "Mar.", "Abr.", "Mai.", "Jun.", "Jul.", "Ago.", "Set.", "Out.", "Nov.", "Dez."]
+
+    return mes[n]
 
 
 # Recebendo as informações de entrada
