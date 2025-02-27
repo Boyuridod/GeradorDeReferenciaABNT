@@ -9,3 +9,6 @@
     SOBRENOME, Nome do autor 1; SOBRENOME, Nome do autor 2; SOBRENOME, Nome do autor 3. Título da página ou do artigo. Nome do site, ano. Disponível em: <URL>. Acesso em: dia mês ano.
  # Estrutura com mais de três autores
     SOBRENOME, Nome do autor 1 et al. Título da página ou do artigo. Nome do site, ano. Disponível em: <URL>. Acesso em: dia mês ano.
+
+# Instalador
+pyinstaller --onefile --noconsole --icon=icone.ico --name=MeuPrograma script.py
