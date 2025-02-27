@@ -1,3 +1,7 @@
+#pyinstaller --onefile --noconsole --icon=icone.ico --name=GeradorDeReferenciaABNT TelaInicial.py
+
+#TODO Criar um ícone para o APP
+
 from ttkbootstrap import *
 import pyperclip #pip install pyperclip
 from GerarReferencia import gerarReferencia
