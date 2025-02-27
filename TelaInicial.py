@@ -1,6 +1,14 @@
 #pyinstaller --onefile --noconsole --icon=icone.ico --name=GeradorDeReferenciaABNT TelaInicial.py
 
 #TODO Criar um ícone para o APP
+#TODO Ver se vale a pena mudar para Custom TKINTER
+# https://youtu.be/Px-DgrQ_wjI
+# https://youtu.be/iM3kjbbKHQU
+# https://youtu.be/Miydkti_QVE
+# 🚀 Conclusão
+# Se você precisa de uma interface moderna rapidamente, ttkbootstrap é uma ótima escolha.
+# Se quiser personalização extrema e um visual mais profissional, CustomTkinter é melhor.
+# Se o objetivo for simplicidade e compatibilidade máxima, Tkinter puro já resolve.
 
 from ttkbootstrap import *
 import pyperclip #pip install pyperclip
@@ -69,7 +77,8 @@ telaPrincipal.grid_columnconfigure(1, weight=1)
 
 # Título
 labelTitulo = Label(telaPrincipal, text="Gerador de Referência ABNT")
-labelTitulo.grid(row= 0, column= 1, padx= 10, pady= 10)
+# labelTitulo.grid(row= 0, column= 1, padx= 10, pady= 10)
+labelTitulo.pack(ipady=10)
 
 # Componentes do Título do Artigo
 labelTituloDoArtigo = Label(telaPrincipal, text="Título do artigo:")
