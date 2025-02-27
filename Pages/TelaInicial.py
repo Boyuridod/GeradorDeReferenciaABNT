@@ -12,7 +12,7 @@
 
 from ttkbootstrap import *
 import pyperclip #pip install pyperclip
-from GerarReferencia import gerarReferencia
+from Pages.GerarReferencia import gerarReferencia
 
 # Função de limpar as entradas
 def limpar():
@@ -144,5 +144,3 @@ botaoGerar.grid(row= 12 + x, column= 1, padx= 10, pady= 10)
 #Chamar a Tela
 
 telaPrincipal.mainloop()
-
-# link = inputLink.get("1.0", END)
