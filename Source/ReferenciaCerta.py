@@ -7,6 +7,8 @@ from math import ceil
 import os
 import sqlite3
 
+versao = "v1.0.0"
+
 autores_digital = []
 autores_impresso = []
 todasReferencias = []
