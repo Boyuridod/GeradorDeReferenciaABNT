@@ -16,8 +16,6 @@ autores_impresso = []
 todasReferencias = []
 tema = 0
 
-teste = 0
-
 vermelho = "#ED2100"
 vinho = "#B41A02"
 
