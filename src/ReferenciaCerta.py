@@ -85,7 +85,7 @@ def botaoGerarOnClick(pagina):
         if(len(autores_impresso) < 4):
             for entry in autores_impresso:
                 autor = entry[1].get()
-                autores += f"{autor}, "
+                autores += f"{autor}; "
 
             autores = autores[:-4]
 
@@ -103,7 +103,7 @@ def botaoGerarOnClick(pagina):
         if(len(autores_digital) < 4):
             for entry in autores_digital:
                 autor = entry[1].get()
-                autores += f"{autor}, "
+                autores += f"{autor}; "
 
             autores = autores[:-4]
 
